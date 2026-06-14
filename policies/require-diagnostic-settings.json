@@ -1,0 +1,20 @@
+{
+  "if": {
+    "field": "type",
+    "in": [
+      "Microsoft.Network/firewalls",
+      "Microsoft.Network/bastionHosts"
+    ]
+  },
+  "then": {
+    "effect": "auditIfNotExists",
+    "details": {
+      "type": "Microsoft.Insights/diagnosticSettings",
+      "name": "set",
+      "existenceCondition": {
+        "field": "Microsoft.Insights/diagnosticSettings/workspaceId",
+        "exists": "true"
+      }
+    }
+  }
+}
