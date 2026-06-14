@@ -177,6 +177,28 @@ resource "azurerm_management_group_policy_assignment" "deny_public_ip_corp" {
   policy_definition_id = azurerm_policy_definition.deny_public_ip.id
 }
 
+resource "azurerm_policy_definition" "require_diagnostic_settings" {
+  name                = "${local.prefix}-require-diagnostic-settings"
+  policy_type         = "Custom"
+  mode                = "Indexed"
+  display_name        = "CAF - Require diagnostics for firewall and bastion"
+  management_group_id = azurerm_management_group.organization.id
+
+  metadata = jsonencode({
+    category = "Monitoring"
+    version  = "1.0.0"
+  })
+
+  policy_rule = file("${path.module}/../../policies/require-diagnostic-settings.json")
+}
+
+resource "azurerm_management_group_policy_assignment" "require_diagnostic_settings" {
+  name                 = "require-diagnostic-settings"
+  display_name         = "CAF - Audit firewall and Bastion diagnostics"
+  management_group_id  = azurerm_management_group.platform.id
+  policy_definition_id = azurerm_policy_definition.require_diagnostic_settings.id
+}
+
 resource "azurerm_management_group_policy_assignment" "security_benchmark" {
   name                 = "azure-security-benchmark"
   display_name         = "Microsoft Cloud Security Benchmark"

@@ -65,7 +65,7 @@ Do not run an unreviewed interactive apply against production.
 ## Post-deployment
 
 1. Route subscription Azure Activity logs to the central workspace.
-2. Confirm diagnostic settings are enabled for central monitoring and firewall logs.
+2. Confirm diagnostic settings are enabled for central monitoring, firewall logs, and Bastion logs.
 3. Assign the policy initiative identity the roles required for remediation.
 4. Review policy compliance and create remediation tasks.
 4. Configure Defender for Cloud plans by workload risk and cost approval.

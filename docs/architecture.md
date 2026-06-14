@@ -64,7 +64,8 @@ connectivity subscriptions into the central workspace.
 
 Azure Policy assignments enforce approved regions, required tags, public IP
 controls, and monitoring guardrails. Diagnostic settings are a first-class part
-of the platform observability baseline.
+of the platform observability baseline. A custom policy audits Azure Firewall
+and Azure Bastion diagnostics to ensure telemetry is collected centrally.
 
 ## Availability and resilience
 

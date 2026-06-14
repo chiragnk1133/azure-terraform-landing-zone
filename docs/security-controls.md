@@ -15,6 +15,7 @@
 | Logging | Central security telemetry | Log Analytics workspace with 90-day default retention | Implemented |
 | Logging | Network diagnostics | Firewall logs and metrics sent to central workspace | Implemented |
 | Logging | Activity log collection | Subscription activity logs routed to central Log Analytics | Implemented |
+| Logging | Resource diagnostics | AuditIfNotExists policy for Azure Firewall and Azure Bastion diagnostic settings | Configurable |
 | Governance | Monitoring and diagnostics enforcement | Policy assignments for locations, tags, public IPs, and diagnostics | Implemented |
 | Detection | Critical deletion monitoring | Scheduled-query alert and security action group | Implemented |
 | Identity | Least privilege | Group-based RBAC, PIM, managed identities | Operational control |
