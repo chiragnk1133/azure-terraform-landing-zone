@@ -1,0 +1,18 @@
+{
+  "if": {
+    "allOf": [
+      {
+        "field": "location",
+        "notIn": "[parameters('allowedLocations')]"
+      },
+      {
+        "field": "location",
+        "notEquals": "global"
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
+

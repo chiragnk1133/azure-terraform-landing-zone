@@ -1,0 +1,25 @@
+name: Terraform validation
+
+on:
+  pull_request:
+    paths:
+      - "**/*.tf"
+      - "policies/**"
+      - ".github/workflows/terraform.yml"
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+      - run: terraform fmt -check -recursive
+      - run: terraform init -backend=false
+      - run: terraform validate

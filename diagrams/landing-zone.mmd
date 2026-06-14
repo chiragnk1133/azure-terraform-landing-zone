@@ -1,0 +1,26 @@
+flowchart LR
+    tenant["Microsoft Entra tenant"] -->|"Governance root"| org["Organization management group"]
+    org --> platform["Platform"]
+    org --> landingZones["Landing Zones"]
+    org --> sandbox["Sandbox"]
+    org --> decommissioned["Decommissioned"]
+    platform --> management["Management"]
+    platform --> connectivity["Connectivity"]
+    platform --> identity["Identity"]
+    landingZones --> corp["Corp"]
+    landingZones --> online["Online"]
+    management --> managementSub["Management subscription"]
+    connectivity --> connectivitySub["Connectivity subscription"]
+    identity --> identitySub["Identity subscription"]
+    corp --> corpSubs["Internal workload subscriptions"]
+    online --> onlineSubs["Internet-facing workload subscriptions"]
+    managementSub --> operations["Log Analytics, alerts, automation"]
+    connectivitySub --> hub["Regional hub VNet"]
+    hub --> firewall["Azure Firewall"]
+    hub --> hybrid["Optional VPN, Bastion, DDoS"]
+    hub --> spokes["Application spoke VNets"]
+    corpSubs --> spokes
+    onlineSubs --> spokes
+    org -.->|"Policy inheritance"| platform
+    org -.->|"Policy inheritance"| landingZones
+

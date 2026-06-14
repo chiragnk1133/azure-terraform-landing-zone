@@ -1,0 +1,13 @@
+service,enabled_by_default,quantity,monthly_low_usd,monthly_high_usd,notes
+Management groups and Azure Policy,true,n/a,0,0,No direct charge
+Log Analytics,true,100 GB,250,350,Varies by region and commitment tier
+Log retention,true,90 days,0,50,Depends on included retention and archive use
+Azure Monitor alerts,true,light usage,10,50,Query and notification dependent
+Azure Automation,true,light usage,0,20,Job runtime dependent
+Azure Firewall Standard,true,730 hours,900,1300,Data processing extra
+Standard public IP,true,1,3,5,Regional pricing varies
+Azure Bastion Standard,false,730 hours,200,400,Outbound data extra
+VPN Gateway VpnGw1AZ,false,730 hours,150,250,Data transfer extra
+DDoS Network Protection,false,1 plan,2500,3500,Verify current plan pricing
+Defender for Cloud,false,usage based,0,0,Price per protected resource or transaction
+
