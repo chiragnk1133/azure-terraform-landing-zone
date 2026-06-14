@@ -24,8 +24,18 @@ variable "enable_firewall" {
   type = bool
 }
 
+variable "firewall_sku" {
+  type    = string
+  default = "Premium"
+}
+
 variable "enable_bastion" {
   type = bool
+}
+
+variable "bastion_sku" {
+  type    = string
+  default = "Standard"
 }
 
 variable "enable_vpn_gateway" {

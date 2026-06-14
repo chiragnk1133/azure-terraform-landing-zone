@@ -5,7 +5,7 @@
 | Billing and tenant | One Microsoft Entra tenant; existing subscriptions are supplied as inputs. Enrollment and subscription creation remain organizational prerequisites. |
 | Identity and access | Entra ID is the control plane identity provider. Use groups, workload identities, PIM, Conditional Access, and two emergency-access accounts. Avoid standing individual Owner assignments. |
 | Resource organization | Separate platform subscriptions and management groups. One application landing-zone subscription per workload environment is the preferred starting model. |
-| Network topology | Hub-and-spoke with a connectivity-owned regional hub. Private endpoints and centralized egress are preferred. |
+| Network topology | Hub-and-spoke with a connectivity-owned regional hub. Private endpoints and centralized egress are preferred. Azure Firewall may use Premium SKU for advanced network and application inspection. |
 | Security | Microsoft Cloud Security Benchmark policy initiative, location restriction, tag audits, and public-IP denial in Corp. Defender plans are configurable. |
 | Observability | Central Log Analytics, subscription activity logs, firewall and Bastion diagnostics, and policy-based monitoring guardrails. |
 | Management | Central Log Analytics, alert action group, Azure Automation identity, and security alert example. |

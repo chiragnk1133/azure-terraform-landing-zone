@@ -80,7 +80,7 @@ resource "azurerm_firewall" "hub" {
   location            = azurerm_resource_group.connectivity.location
   resource_group_name = azurerm_resource_group.connectivity.name
   sku_name            = "AZFW_VNet"
-  sku_tier            = "Standard"
+  sku_tier            = var.firewall_sku
   firewall_policy_id  = azurerm_firewall_policy.hub[0].id
   zones               = ["1", "2", "3"]
   tags                = var.tags
@@ -126,7 +126,7 @@ resource "azurerm_bastion_host" "hub" {
   name                = "bas-${var.prefix}-hub-${var.location}"
   location            = azurerm_resource_group.connectivity.location
   resource_group_name = azurerm_resource_group.connectivity.name
-  sku                 = "Standard"
+  sku                 = var.bastion_sku
   copy_paste_enabled  = true
   file_copy_enabled   = false
   tunneling_enabled   = true

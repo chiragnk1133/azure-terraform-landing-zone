@@ -47,7 +47,7 @@ The baseline uses hub-and-spoke networking:
 - The hub is owned by the connectivity subscription.
 - Workload VNets are owned by application subscriptions.
 - Azure Firewall provides controlled egress and east-west inspection when
-  enabled.
+  enabled, with Premium SKU available for TLS inspection and IDPS workloads.
 - Private endpoints are preferred for supported platform services.
 - VPN Gateway, Bastion, and DDoS Network Protection are optional because their
   need and cost depend on the organization.

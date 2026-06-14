@@ -51,7 +51,9 @@ module "connectivity" {
   hub_address_space          = var.hub_address_space
   hub_subnets                = var.hub_subnets
   enable_firewall            = var.enable_firewall
+  firewall_sku               = var.firewall_sku
   enable_bastion             = var.enable_bastion
+  bastion_sku                = var.bastion_sku
   enable_vpn_gateway         = var.enable_vpn_gateway
   enable_ddos_protection     = var.enable_ddos_protection
   log_analytics_workspace_id = module.management.log_analytics_workspace_id

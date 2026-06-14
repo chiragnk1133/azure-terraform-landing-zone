@@ -9,8 +9,8 @@
 | Governance | Resource ownership metadata | Audit `Environment`, `Owner`, `CostCenter`, and `DataClassification` tags | Implemented |
 | Security posture | Microsoft Cloud Security Benchmark | Built-in policy initiative at organization scope | Implemented |
 | Network | Restrict public exposure | Public IP creation denied under Corp | Implemented |
-| Network | Central inspection | Azure Firewall Standard, threat intelligence alert mode, DNS proxy | Configurable |
-| Network | Secure administration | Azure Bastion Standard; no direct VM public IP requirement | Configurable |
+| Network | Central inspection | Azure Firewall Premium or Standard, threat intelligence alert mode, DNS proxy | Configurable |
+| Network | Secure administration | Azure Bastion Standard or Basic; no direct VM public IP requirement | Configurable |
 | Network | DDoS protection | DDoS Network Protection plan | Configurable |
 | Logging | Central security telemetry | Log Analytics workspace with 90-day default retention | Implemented |
 | Logging | Network diagnostics | Firewall logs and metrics sent to central workspace | Implemented |

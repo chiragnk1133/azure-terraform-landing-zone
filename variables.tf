@@ -86,15 +86,37 @@ variable "hub_subnets" {
 }
 
 variable "enable_firewall" {
-  description = "Deploy Azure Firewall Standard and its policy."
+  description = "Deploy Azure Firewall and its policy."
   type        = bool
   default     = true
+}
+
+variable "firewall_sku" {
+  description = "Azure Firewall SKU tier."
+  type        = string
+  default     = "Premium"
+
+  validation {
+    condition     = contains(["Standard", "Premium"], var.firewall_sku)
+    error_message = "firewall_sku must be either 'Standard' or 'Premium'."
+  }
 }
 
 variable "enable_bastion" {
   description = "Deploy Azure Bastion Standard."
   type        = bool
   default     = false
+}
+
+variable "bastion_sku" {
+  description = "Azure Bastion SKU."
+  type        = string
+  default     = "Standard"
+
+  validation {
+    condition     = contains(["Standard", "Basic"], var.bastion_sku)
+    error_message = "bastion_sku must be either 'Standard' or 'Basic'."
+  }
 }
 
 variable "enable_vpn_gateway" {

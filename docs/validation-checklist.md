@@ -18,6 +18,7 @@
 - [ ] Deny policies have been impact-assessed.
 - [ ] Resource names and regions are correct.
 - [ ] Firewall, Bastion, VPN, DDoS, and Defender flags match approval.
+- [ ] Firewall SKU (Standard or Premium) and Bastion SKU (Standard or Basic) are approved.
 - [ ] Estimated monthly cost is accepted.
 
 ## After apply

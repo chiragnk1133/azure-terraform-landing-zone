@@ -5,3 +5,8 @@
 *.tfplan
 crash.log
 terraform.tfvars
+*.tfvars
+.env
+.env.*
+*.pem
+*.key

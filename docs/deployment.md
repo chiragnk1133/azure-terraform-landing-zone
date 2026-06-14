@@ -37,6 +37,10 @@ subscription, region, contact, network, and tag value.
 Confirm that the five subnet prefixes are contained in `hub_address_space` and
 do not overlap. Reserved subnet names must not be changed.
 
+Set `firewall_sku` to `Premium` for TLS inspection and IDPS capabilities, or
+`Standard` for baseline firewall inspection only. Set `bastion_sku` to
+`Standard` or `Basic` depending on your budget and remote access requirements.
+
 ## Validate and plan
 
 ```powershell
@@ -50,7 +54,8 @@ terraform show main.tfplan
 ```
 
 Review policy effects carefully. The allowed-location and Corp public-IP
-policies use `deny`.
+policies use `deny`. When enabling Azure Firewall Premium, confirm the SKU and
+associated operating model with security and networking teams.
 
 ## Apply
 
