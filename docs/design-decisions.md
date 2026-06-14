@@ -7,6 +7,7 @@
 | Resource organization | Separate platform subscriptions and management groups. One application landing-zone subscription per workload environment is the preferred starting model. |
 | Network topology | Hub-and-spoke with a connectivity-owned regional hub. Private endpoints and centralized egress are preferred. |
 | Security | Microsoft Cloud Security Benchmark policy initiative, location restriction, tag audits, and public-IP denial in Corp. Defender plans are configurable. |
+| Observability | Central Log Analytics, subscription activity logs, firewall and Bastion diagnostics, and policy-based monitoring guardrails. |
 | Management | Central Log Analytics, alert action group, Azure Automation identity, and security alert example. |
 | Governance | Policy inheritance at management-group scope. Exceptions use policy exemptions rather than editing shared definitions. |
 | Platform automation | Terraform, remote state, pull-request validation, provider pinning, and reviewed plans. |

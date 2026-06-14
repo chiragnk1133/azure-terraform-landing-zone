@@ -59,9 +59,12 @@ The baseline uses hub-and-spoke networking:
 
 The management subscription contains a central Log Analytics workspace. The
 connectivity module sends Azure Firewall logs and metrics to this workspace.
-At scale, Azure Policy should deploy diagnostic settings to supported resources
-and subscriptions. The initial alert detects successful delete operations after
-Azure Activity logs are routed to the workspace.
+The landing zone also routes Azure Activity logs from management and
+connectivity subscriptions into the central workspace.
+
+Azure Policy assignments enforce approved regions, required tags, public IP
+controls, and monitoring guardrails. Diagnostic settings are a first-class part
+of the platform observability baseline.
 
 ## Availability and resilience
 

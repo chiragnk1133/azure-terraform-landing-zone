@@ -8,8 +8,9 @@ This repository creates:
 - A CAF-aligned management group hierarchy
 - Platform subscription placement for management, connectivity, and identity
 - Central Log Analytics and Azure Automation resources
-- A hub virtual network with optional Azure Firewall, Bastion, VPN Gateway, and DDoS
-- Management-group policy guardrails
+- A hub virtual network with Azure Firewall, optional Bastion, VPN Gateway, and DDoS
+- Management-group policy assignments and monitoring guardrails
+- Subscription and resource diagnostic settings for firewall, Bastion, and activity logs
 - Architecture, security, operations, deployment, and cost documentation
 
 No Azure resources are deployed automatically.

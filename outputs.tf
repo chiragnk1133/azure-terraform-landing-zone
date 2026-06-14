@@ -13,6 +13,16 @@ output "hub_virtual_network_id" {
   value       = module.connectivity.hub_virtual_network_id
 }
 
+output "bastion_host_id" {
+  description = "Azure Bastion host ID when enabled."
+  value       = module.connectivity.bastion_host_id
+}
+
+output "bastion_public_ip" {
+  description = "Azure Bastion public IP when enabled."
+  value       = module.connectivity.bastion_public_ip
+}
+
 output "firewall_private_ip" {
   description = "Azure Firewall private IP when enabled."
   value       = module.connectivity.firewall_private_ip

@@ -140,6 +140,28 @@ resource "azurerm_bastion_host" "hub" {
   }
 }
 
+resource "azurerm_monitor_diagnostic_setting" "bastion" {
+  count = var.enable_bastion ? 1 : 0
+
+  name                       = "diag-${var.prefix}-bastion"
+  target_resource_id         = azurerm_bastion_host.hub[0].id
+  log_analytics_workspace_id = var.log_analytics_workspace_id
+
+  enabled_log {
+    category = "AuditLogs"
+    enabled  = true
+  }
+
+  enabled_log {
+    category = "ConnectionLogs"
+    enabled  = true
+  }
+
+  enabled_metric {
+    category = "AllMetrics"
+  }
+}
+
 resource "azurerm_public_ip" "vpn" {
   count = var.enable_vpn_gateway ? 1 : 0
 

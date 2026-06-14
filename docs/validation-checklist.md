@@ -25,6 +25,7 @@
 - [ ] Management-group hierarchy and subscription placement are correct.
 - [ ] Policy assignments report compliance data.
 - [ ] Central workspace receives Azure Activity and firewall logs.
+- [ ] Diagnostic settings for management and connectivity subscriptions are enabled.
 - [ ] Security alert notification is tested.
 - [ ] Firewall threat intelligence and DNS proxy are validated.
 - [ ] Budgets and anomaly alerts exist.

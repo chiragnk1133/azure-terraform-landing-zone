@@ -14,7 +14,7 @@
 ## Routine cadence
 
 - Daily: Review critical security and availability alerts.
-- Weekly: Review policy compliance, failed deployments, and cost anomalies.
+- Weekly: Review policy compliance, diagnostic settings status, failed deployments, and cost anomalies.
 - Monthly: Patch platform-managed systems, review Defender recommendations,
   inspect firewall rules, and review budgets.
 - Quarterly: Review privileged access, policy exemptions, architecture drift,

@@ -60,3 +60,66 @@ module "connectivity" {
   depends_on = [module.governance]
 }
 
+resource "azurerm_monitor_diagnostic_setting" "management_subscription_activity_logs" {
+  name                       = "diag-${local.prefix}-management-activity"
+  target_resource_id         = "/subscriptions/${var.management_subscription_id}"
+  log_analytics_workspace_id = module.management.log_analytics_workspace_id
+
+  logs {
+    category = "Administrative"
+    enabled  = true
+  }
+
+  logs {
+    category = "Security"
+    enabled  = true
+  }
+
+  logs {
+    category = "Policy"
+    enabled  = true
+  }
+
+  logs {
+    category = "ServiceHealth"
+    enabled  = true
+  }
+
+  logs {
+    category = "Alert"
+    enabled  = true
+  }
+}
+
+resource "azurerm_monitor_diagnostic_setting" "connectivity_subscription_activity_logs" {
+  provider                   = azurerm.connectivity
+  name                       = "diag-${local.prefix}-connectivity-activity"
+  target_resource_id         = "/subscriptions/${var.connectivity_subscription_id}"
+  log_analytics_workspace_id = module.management.log_analytics_workspace_id
+
+  logs {
+    category = "Administrative"
+    enabled  = true
+  }
+
+  logs {
+    category = "Security"
+    enabled  = true
+  }
+
+  logs {
+    category = "Policy"
+    enabled  = true
+  }
+
+  logs {
+    category = "ServiceHealth"
+    enabled  = true
+  }
+
+  logs {
+    category = "Alert"
+    enabled  = true
+  }
+}
+
